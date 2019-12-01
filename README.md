@@ -43,3 +43,11 @@
 ![demo](https://github.com/mirsazzathossain/Online_Marketplace/blob/master/demo/21.PNG)
 ## By presing continue shopping we can look for some more product. Our navbar is also responsive.
 ![demo](https://github.com/mirsazzathossain/Online_Marketplace/blob/master/demo/22.PNG)
+## Can't add more product to the cart if it is out of stock
+![demo](https://github.com/mirsazzathossain/Online_Marketplace/blob/master/demo/45545645.PNG)
+## New chat feature added!!
+![demo](https://github.com/mirsazzathossain/Online_Marketplace/blob/master/demo/Capture11212.PNG)
+![demo](https://github.com/mirsazzathossain/Online_Marketplace/blob/master/demo/12121212.PNG)
+## Chat window float of every page and chat windows can be minimize or maximize
+![demo](https://github.com/mirsazzathossain/Online_Marketplace/blob/master/demo/1212121sef.PNG)
+
