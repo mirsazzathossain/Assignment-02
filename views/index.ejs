@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Home</title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="developer" content="Mir Sazzat Hossain">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="">
+
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.12.0/build/css/alertify.min.css"/>
+        <!-- Default theme -->
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.12.0/build/css/themes/default.min.css"/>
+        <!-- Semantic UI theme -->
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.12.0/build/css/themes/semantic.min.css"/>
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Vidaloka&display=swap" rel="stylesheet">
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- Animate.css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+         <!-- Front Awesome -->
+         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+         <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.12.0/build/css/alertify.rtl.min.css"/>
+         <!-- Default theme -->
+         <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.12.0/build/css/themes/default.rtl.min.css"/>
+         <!-- Semantic UI theme -->
+         <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.12.0/build/css/themes/semantic.rtl.min.css"/>
+         <!-- Bootstrap theme -->
+         <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.12.0/build/css/themes/bootstrap.rtl.min.css"/>
+
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/chat.css">
+        
+    
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black;">
+            <a class="navbar-brand" href="/">
+                Saz Shop<span>.</span>
+            </a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <div style="display: block;">
+                            <a id="cart-id" class="nav-link" href="#">Cart</span></a>
+                            <div class="shopping-cart">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <span id="numItem">0</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a id="addnewproduct" class="nav-link" href="#" style="display: block !important;">
+                            <i class="fa fa-plus-circle" aria-hidden="true"></i> 
+                            Add New Product
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="product-section" >
+            <div class="container">
+                <div class="section-title">
+                    <h1>Products</h1>
+                </div>
+
+                <div class="no-product d-flex justify-content-center align-items-center" style="display: none !important;">
+                    <p>;( No product to show!!</p>
+                </div>
+
+                <div class="row product">
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="add-product" style="display: none;">
+            <div class="row">
+                <div class="col-xl-9 col-lg-10 col-md-12 col-sm-12 mx-auto">
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-center align-items-center">
+                            <h1 class="section-title d-inline-block">Add New Product</h>
+                        </div>
+                    </div>
+                    <form>
+                        <div class="form-group">
+                            <label for="validationName">Name:</label>
+                            <input class="form-control" id="validationName" placeholder="Enter product name" required>
+                            <div class="invalid-feedback">
+                                Name is required!
+                            </div>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="validationDescription">Description:</label>
+                            <textarea class="form-control" id="validationDescription" placeholder="Enter product description" required></textarea>
+                            <div class="invalid-feedback">
+                                Description must be at least 10 characters long!
+                            </div>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <select class="custom-select" required>
+                                <option value="choose" selected>Choose tag</option>
+                                <option value="new">New</option>
+                                <option value="onsale">On sale</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select one!
+                            </div>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="validationURL">Photo:</label>
+                            <input class="form-control" id="validationURL" placeholder="Enter a photo URL" required>
+                            <div class="invalid-feedback">
+                                Invalid URL!
+                            </div>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="col-md-6 col-sm-12">
+                                <label for="validationPrice">Price:</label>
+                                <input type="number" min="0.00" step="0.01" class="form-control" id="validationPrice" placeholder="Enter product price" required>
+                                <div class="invalid-feedback">
+                                    Invalid price!
+                                </div>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <label for="validationQuantity">Quantity:</label>
+                                <input type="number" min="0" class="form-control" id="validationQuantity" placeholder="Enter product quantity" required>
+                                <div class="invalid-feedback">
+                                    Invalid quantity!
+                                </div>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-row">
+                            <div class="col-md-6 col-sm-12">
+                                <input id="submit" type="button" class="btn btn-outline-success btn-block" value="Submit">
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <input id="cancle" type="button" class="btn btn-outline-danger btn-block" value="Cancle">
+                            </div>
+                        </div>
+        
+                    </form>
+                    <br>
+                </div>
+                            
+            </div>
+        </section>
+
+
+	<section class="cart-section spad"  style="display: none;">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8">
+					<div class="cart-table">
+						<h3>Your Cart</h3>
+						<div class="cart-table-warp">
+							<table>
+							<thead>
+								<tr>
+									<th class="product-th">Product</th>
+									<th class="quy-th">Quantity</th>
+									<th class="total-th">Price</th>
+								</tr>
+							</thead>
+							<tbody id="cart-table-body">
+                                <tr>
+                                    <td>
+                                     <p>;( No product to show!!</p>
+                                    </td>
+                                </tr>
+                                    
+								
+							</tbody>
+						</table>
+						</div>
+						<div class="total-cost">
+							<h6>Total <span id="total">$00.00</span></h6>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 card-right">
+					<a href="#" class="site-btn">Proceed to checkout</a>
+					<a href="" class="site-btn sb-dark">Continue shopping</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+ 
+	<section class="product-sectio" style="display: none;">
+		<div class="container" id="single-product-col">
+            <div class="row" id="single-product-row">
+
+            </div>
+		</div>
+	</section>
+
+
+
+
+
+
+    <div class="fabs">
+        <div class="chat is-visible">
+          <div class="chat_header">
+            <div class="chat_option">
+            <div class="header_img" style="margin-bottom: 5px;"> 
+              <img src="assets/images/anonymous-250.jpg">
+            </div>
+              <span id="chat_head">Anonymous</span> <br>
+             <span id="chat_fullscreen_loader" class="chat_fullscreen_loader" style="display: block;"><i class="fullscreen zmdi zmdi-window-maximize"></i></span>
+    
+            </div>
+    
+          </div>
+          
+        
+          
+          
+          
+          
+            <div id="chat_fullscreen" class="chat_conversion chat_converse" style="display: block;">
+              
+    
+            </div>
+          <div class="fab_field">
+            <a id="fab_send" class="fab is-visible"><i class="zmdi zmdi-mail-send" id="btn"></i></a>
+            <textarea id="chatSend" name="chat_message" placeholder="Send a message" class="chat_field chat_message"></textarea>
+          </div>
+        </div>
+      
+        <a id="prime" class="fab is-float is-visible"><i class="prime zmdi zmdi-close is-active is-visible"></i></a>
+    </div>
+
+
+
+
+        
+        <!--
+        ==============
+        * JS Files *
+        ==============
+        -->
+
+        <!-- JQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!-- Pooper.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <!-- Bootstrap -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.12.0/build/alertify.min.js"></script>
+
+        
+        <!-- Custom js -->
+        <script src="assets/js/script.js" async defer></script>
+        <script src="assets/js/chat.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+            $(function(){
+                let msg=[];
+                let count;
+                var socket = io();
+
+                if(window.localStorage.getItem('msg')){
+                    msg = JSON.parse(window.localStorage.getItem('msg'));
+
+                    msg.forEach((element, index) => {
+                        if((index+1)%2==0){
+                            $('#chat_fullscreen').append(`<span class="chat_msg_item chat_msg_item_admin">`+msg[index]+`</span>`);
+                        }
+                        else{
+                            $('#chat_fullscreen').append(`<span class="chat_msg_item chat_msg_item_user">`+msg[index]+`</span>`);
+                        }
+                    });
+                    count = msg.length;
+
+                    window.localStorage.setItem('cnt', count);
+
+                }
+
+
+                $('#chatSend').on('input', function(){
+                    if($('#chatSend').val().length<1){
+                        $('#btn').css('color','#bbb');
+
+                    }
+                    else{
+                        $('#btn').css('color','#ffc515');
+                    }
+                });
+                $('#btn').click(function(e){
+                    
+                    if($('#chatSend').val().length<1){
+                        $('#chatSend').val('');
+                    }
+                    else{
+                        count = parseInt(window.localStorage.getItem('cnt'))+1;
+                        window.localStorage.setItem('cnt', count);
+                        e.preventDefault();
+                        msg.push($('#chatSend').val());
+                        window.localStorage.setItem('msg', JSON.stringify(msg));
+                        socket.emit('chat message', $('#chatSend').val());
+                        $('#chatSend').val('');
+                        return false;
+                    }
+                });
+                socket.on('chat message', function(msg){
+                    if(count%2==0){
+                        $('#chat_fullscreen').append(`<span class="chat_msg_item chat_msg_item_admin">`+msg+`</span>`);
+                    }
+                    else{
+                        $('#chat_fullscreen').append(`<span class="chat_msg_item chat_msg_item_user">`+msg+`</span>`);
+                    }
+                });
+            })
+        </script>
+
+    </body>
+</html>

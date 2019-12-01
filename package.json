@@ -1,0 +1,36 @@
+{
+  "name": "assignment-02",
+  "version": "1.0.0",
+  "description": "Online Market Place with chat system",
+  "main": "server.js",
+  "scripts": {
+    "test": "console.log('Hello World')"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mirsazzathossain/Assignment-02.git"
+  },
+  "keywords": [
+    "Online",
+    "Marketplace",
+    "Socket",
+    "chat",
+    "system"
+  ],
+  "author": "Mir Sazzat Hossain",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mirsazzathossain/Assignment-02/issues"
+  },
+  "homepage": "https://github.com/mirsazzathossain/Assignment-02#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "node": "^13.1.0",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.1"
+  }
+}
